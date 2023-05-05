@@ -1,0 +1,30 @@
+
+
+1) For MOvie reviews - "movie_rev" Table 
+
+CREATE TABLE
+    movie_rev(
+        Cineverse_movies VARCHAR(100),
+        Rating DECIMAL(2, 1),
+        link VARCHAR(512)
+    );
+
+-- Describing a table / Knowing all the information about a table.
+
+DESCRIBE
+    movie_rev;
+
+-- Selecting 
+
+SELECT
+    *
+FROM
+    movie_rev;
+
+-- Inserting Data
+
+INSERT INTO
+    movie_rev VALUE
+        ('Vikram', 8.5, 'http://127.0.0.1:8000/Vikram'),
+        ('Sita Ramam', 9.0,'http://127.0.0.1:8000/Sita%20Ramam'),
+        ('Thor Love and Thunder', 6.7,'http://127.0.0.1:8000/Thor%20Love%20and%20Thunder');

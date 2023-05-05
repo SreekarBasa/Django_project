@@ -1,0 +1,79 @@
+{% load static %}
+<html lang="en">
+<a href="/" >
+    <img alt="CineverSE" src="{% static 'images/cineverse_logo.png' %}"
+        width="150" height="50">
+</a><br>
+<a href="/info" class="button"><h3>Movie Information</h3></a>
+<a href="/about" class="button"><h3>Cineverse Information</h3></a>
+<head>
+    <title>Movie reviews</title>
+      <style>
+      tbody tr:nth-child(odd) {
+      background-color: #E0C676;
+      }
+
+      tbody tr:nth-child(even) {
+      background-color: #C0CD9C;
+      }
+
+         table {
+            width: 600px;
+            border-collapse: collapse;
+            background-color: #5966B2;
+         }
+         table, th, td {
+            border: 1px solid black;
+         }
+         th, td {
+            padding: 15px;
+            text-align: left;
+         }
+         a:link {
+      color: green;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    a:visited {
+      color: #1EC1E4;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: red;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    a:active {
+      color: yellow;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    body {
+         background-image: url({% static 'images/minfobg.jpg' %});
+
+      </style>
+    </head>
+    <body>
+   <h2> Shows: </h2>
+      <table style="width:100%">
+         <thead>
+            <tr>
+               <th>CineverSE Movies</th>
+               <th>Rating</th>
+               <th>Reviews and Details</th>
+            </tr>
+         </thead>
+         <tbody>
+            {% for movie in Review %}
+            <tr>
+                <td>{{movie.Name}}</td>
+                <td>{{movie.rating}}</td>
+                <td><a href="/{{movie.Name}}" class="button"><h3>{{movie.Name}} Info</h3></a></td>
+            </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+   </body>
+<h4><h3>Note: </h3>Click on links in 3rd column to get Movie's Review and Details</h4>
+</html>

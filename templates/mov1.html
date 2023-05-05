@@ -1,0 +1,42 @@
+{% load static %}
+<html lang="en">
+<a href="/" >
+    <img alt="CineverSE" src="{% static 'images/cineverse_logo.png' %}"
+        width="150" height="50">
+</a><br>
+<a href="/reviews" class="button"><h2>Reviews</h2></a><br><br>
+<head>
+    <style>
+    a:link {
+      color: green;
+      background-color: transparent;
+      text-decoration: none;
+    }
+    a:visited {
+      color: pink;
+      background-color: transparent;
+      text-decoration: none;
+    }
+    a:hover {
+      color: yellow;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    a:active {
+      color: yellow;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+        body {
+         background-image: url({% static 'images/vikram1.jpg' %});
+    </style>
+</head>
+<h1> {{film.Name}} : </h1>
+<a href="https://en.wikipedia.org/wiki/Vikram_(2022_film)" class="button"><h2>Wikipedia</h2></a><br>
+<a href="https://www.imdb.com/title/tt9179430/" class="button"><h2>IMDb</h2></a> <br>
+<a href="{{film.link}}">
+    <img alt="Trailer" src="https://www.luxvide.it/wp-content/uploads/2016/01/button_watch_trailer3.png"
+         width="300" height="70">
+</a>
+
+</html>

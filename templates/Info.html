@@ -1,0 +1,128 @@
+{% load static %}
+<html lang="en">
+<a href="/" >
+    <img alt="CineverSE" src="{% static 'images/cineverse_logo.png' %}"
+        width="150" height="50">
+</a>
+<a href="/reviews" class="button"><h3>    Reviews   </h3></a>
+<a href="/about" class="button"><h3>  Cineverse Information   </h3></a>
+<head>
+      <title>Information about Movies</title>
+      <style>
+      tbody tr:nth-child(odd) {
+      background-color: #89DFEB;
+      }
+
+      tbody tr:nth-child(even) {
+      background-color: #3F8A94;
+      }
+
+      tbody tr {
+      background-image: url(noise.png);
+      }
+
+         table {
+            width: 600px;
+            border-collapse: collapse;
+            background-color: #1865DE;
+         }
+         table, th, td {
+            border: 1px solid black;
+         }
+         th, td {
+            padding: 15px;
+            text-align: left;
+         }
+         a:link {
+      color: green;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    a:visited {
+      color: yellow;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: blue;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    a:active {
+      color: yellow;
+      background-color: transparent;
+      text-decoration: None;
+    }
+    body {
+         background-image: url({% static 'images/infobg2.jpg' %});
+      </style>
+   </head>
+   <body>
+   <h2> Movies: </h2>
+      <table class="w3-table w3-striped w3-bordered" style="width:100%" >
+         <thead>
+            <tr>
+               <th>Movie</th>
+               <th>Show</th>
+               <th>Screen</th>
+               <th>Availability</th>
+               <th>Wikipedia Link</th>
+            </tr>
+         </thead>
+         <tbody>
+            {% for movie in show %}
+            <tr>
+               <td>{{movie.Name}}</td>
+               <td>{{movie.Shows}}</td>
+               <td>{{movie.screen}}</td>
+               <td>{{movie.available}}</td>
+               <td><a href="{{movie.link}}" class="button"><h3>{{movie.link}} Info</h3></a></td>
+            </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+   </body>
+
+<head>
+   <title>Information about shows</title>
+      <style>
+         table {
+            width: 600px;
+            border-collapse: collapse;
+         }
+         table, th, td {
+            border: 1px solid black;
+         }
+         th, td {
+            padding: 15px;
+            text-align: left;
+         }
+      </style>
+   </head>
+   <body>
+   <h2> Shows: </h2>
+      <table style="width:100%">
+         <thead>
+            <tr>
+               <th>CineverSE</th>
+               <th>Screen - 1</th>
+               <th>Screen - 2</th>
+               <th>Screen - 3</th>
+
+            </tr>
+         </thead>
+         <tbody>
+            {% for movie in scrn %}
+            <tr>
+               <td>{{movie.show_movie}}</td>
+               <td>{{movie.show_s1}}</td>
+               <td>{{movie.show_s2}}</td>
+               <td>{{movie.show_s3}}</td>
+            </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+   </body>
+
+
+

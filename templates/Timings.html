@@ -1,0 +1,112 @@
+{% load static %}
+<html lang="en">
+<a href="/" >
+    <img alt="CineverSE" src="{% static 'images/cineverse_logo.png' %}"
+        width="150" height="50">
+</a><br>
+<a href="/info" class="button"><h3>Movie Information</h3></a>
+<a href="/reviews" class="button"><h3>Reviews</h3></a>
+
+<head>
+    <title>Price and Timings</title>
+      <style>
+      tbody tr:nth-child(odd) {
+      background-color: #C2BFCA;
+      }
+
+      tbody tr:nth-child(even) {
+      background-color: #AFA0D6;
+      }
+
+         table {
+            width: 600px;
+            border-collapse: collapse;
+            background-color: #6EDB5E;
+         }
+         table, th, td {
+            border: 1px solid black;
+         }
+         th, td {
+            padding: 15px;
+            text-align: left;
+         }
+         a:link {
+      color: green;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    a:visited {
+      color: blue;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: red;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    a:active {
+      color: yellow;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    body {
+         background-image: url({% static 'images/infobg1.jpg' %});
+      </style>
+    </head>
+    <body>
+    <h2> Prices and Timings: </h2>
+      <table style="width:100%">
+         <thead>
+            <tr>
+               <th>CineverSE shows</th>
+               <th>screen - 1</th>
+               <th>screen - 2</th>
+                <th>screen- 3</th>
+            </tr>
+         </thead>
+         <tbody>
+            {% for movie in pt %}
+            <tr>
+                <td>show - 1</td>
+                <td>{{movie.cost1}} <br> [From 9:{{movie.sc1}}] </td>
+                <td>{{movie.cost2}} <br> [From 9:{{movie.sc2}}] </td>
+                <td>{{movie.cost3}} <br> [From 9:{{movie.sc3}}] </td>
+            </tr>
+            {% endfor %}
+            {% for movie in pt %}
+            <tr>
+                <td>show - 2</td>
+                <td>{{movie.cost1}} <br> [From 12:{{movie.sc1}}] </td>
+                <td>{{movie.cost2}} <br> [From 12:{{movie.sc2}}] </td>
+                <td>{{movie.cost3}} <br> [From 12:{{movie.sc3}}] </td>
+            </tr>
+            {% endfor %}
+            {% for movie in pt %}
+            <tr>
+                <td>show - 3</td>
+                <td>{{movie.cost1}} <br> [From 15:{{movie.sc1}}] </td>
+                <td>{{movie.cost2}} <br> [From 15:{{movie.sc2}}] </td>
+                <td>{{movie.cost3}} <br> [From 15:{{movie.sc3}}] </td>
+            </tr>
+            {% endfor %}
+            {% for movie in pt %}
+            <tr>
+                <td>show - 4</td>
+                <td>{{movie.cost1}} <br> [From 18:{{movie.sc1}}] </td>
+                <td>{{movie.cost2}} <br> [From 18:{{movie.sc2}}] </td>
+                <td>{{movie.cost3}} <br> [From 18:{{movie.sc3}}] </td>
+            </tr>
+            {% endfor %}
+            {% for movie in pt %}
+            <tr>
+                <td>show - 5</td>
+                <td>{{movie.cost1}} <br> [From 21:{{movie.sc1}}] </td>
+                <td>{{movie.cost2}} <br> [From 21:{{movie.sc2}}] </td>
+                <td>{{movie.cost3}} <br> [From 21:{{movie.sc3}}] </td>
+            </tr>
+            {% endfor %}
+
+         </tbody>
+      </table>
+   </body>

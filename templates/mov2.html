@@ -1,0 +1,42 @@
+{% load static %}
+<html lang="en">
+<a href="/" >
+    <img alt="CineverSE" src="{% static 'images/cineverse_logo.png' %}"
+        width="150" height="50">
+</a><br>
+<a href="/reviews" class="button"><h2>Reviews</h2></a>
+<head>
+    <style>
+    a:link {
+      color: grey;
+      background-color: transparent;
+      text-decoration: none;
+    }
+    a:visited {
+      color: blue;
+      background-color: transparent;
+      text-decoration: none;
+    }
+    a:hover {
+      color: red;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    a:active {
+      color: yellow;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+        body {
+         background-image: url({% static 'images/sitaramambg.jpg' %});
+    </style>
+</head>
+<h2> SITA RAMAM : </h2>
+<a href="https://en.wikipedia.org/wiki/Sita_Ramam" class="button"><h3>Wikipedia</h3></a><br>
+<a href="https://www.imdb.com/title/tt20850406/" class="button"><h3>IMDb</h3></a>
+<a href="{{film.link}}">
+    <img alt="Trailer" src="https://www.luxvide.it/wp-content/uploads/2016/01/button_watch_trailer3.png"
+         width="300" height="70">
+</a>
+
+</html>

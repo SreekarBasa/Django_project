@@ -1,0 +1,4 @@
+name,lang,Details,prices,link,icon,availability,upcoming,upd
+'Sita Ramam','Telugu','124 minutes','90-150-250','https://www.youtube.com/watch?v=Ljk6tGZ1l3A','sita_ramam.jpg','12 8 5',False,False
+'Vikram','Telugu','177 minutes','90-150-250','https://www.youtube.com/watch?v=WC5X3i0B4cg','vikram.jpg','10 6 23',False,False
+','Telugu','177 minutes','90-150-250','https://www.youtube.com/watch?v=WC5X3i0B4cg','vikram.jpg','10-6-23',False,False
