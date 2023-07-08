@@ -1,2 +1,0 @@
-def urls():
-    return None
