@@ -25,8 +25,6 @@ SECRET_KEY = 'django-insecure-8i*7x0$4sl#1*man$5%un0agkd0r6oc!=2i+t$pnfmyifv+o5f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
-
 
 # Application definition
 
@@ -120,7 +118,6 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 #STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 """
 STATIC_URL = 'static/'
-MEDIA_URL = 'media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
